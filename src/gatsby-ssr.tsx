@@ -59,13 +59,19 @@ export function onRenderBody(
     }
   }
 
-  let entryLinks: React.ReactNode[] = [];
-  let entryScripts: React.ReactNode[] = [];
+  const entryLinks: React.ReactNode[] = [];
+  const entryScripts: React.ReactNode[] = [];
 
-  const entryPoint = pluginOptions.entry[result?.pageContext?.entry];
+  const entryPoint = result?.pageContext?.entry;
 
-  webpackStatFile.namedChunkGroups[entryPoint].assets.forEach((asset: string) => {
-    if (asset.endsWith('.map') || /webpack-runtime/.test(asset)) return;
+  if (!entryPoint) {
+    return;
+  }
+
+  webpackStatFile.namedChunkGroups[entryPoint]?.assets.forEach((asset: string) => {
+    if (asset.endsWith('.map') || /webpack-runtime/.test(asset)) {
+      return;
+    }
 
     entryLinks.push(<link key={asset} as="script" rel="preload" href={`/${asset}`} />);
     entryScripts.push(<script key={asset} src={`/${asset}`} async={true} />);

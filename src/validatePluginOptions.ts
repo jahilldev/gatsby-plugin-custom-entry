@@ -1,4 +1,4 @@
-import { IOptions } from '../model';
+import { IOptions } from './model';
 
 /* -----------------------------------
  *

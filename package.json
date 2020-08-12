@@ -9,7 +9,10 @@
     "watch": "npx tsc --project tsconfig.json --watch"
   },
   "files": [
-    "dist"
+    "gatsby-node.js",
+    "gatsby-ssr.js",
+    "validatePluginOptions.js",
+    "model.js"
   ],
   "peerDependencies": {
     "gatsby": "^2.0.0"

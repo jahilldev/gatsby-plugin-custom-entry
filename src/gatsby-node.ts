@@ -1,4 +1,4 @@
-import { validatePluginOptions } from './utility/validatePluginOptions';
+import { validatePluginOptions } from './validatePluginOptions';
 import { IOptions } from './model';
 
 /* -----------------------------------

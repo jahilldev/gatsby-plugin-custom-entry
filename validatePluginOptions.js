@@ -13,4 +13,3 @@ function validatePluginOptions(pluginOptions) {
     return true;
 }
 exports.validatePluginOptions = validatePluginOptions;
-//# sourceMappingURL=validatePluginOptions.js.map
