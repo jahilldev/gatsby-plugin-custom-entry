@@ -1,0 +1,6 @@
+node_modules/
+gatsby-ssr.js
+gatsby-node.js
+model.js
+*.spec.js
+*.js.map
